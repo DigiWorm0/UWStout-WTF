@@ -1,0 +1,68 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@font-face {
+    font-family: 'Franklin Gothic Condensed';
+    src: url('./fonts/FranklinGothic-Cd-webfont.woff');
+}
+
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: url('./fonts/FranklinGothic-Book-webfont.woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+@font-face {
+    font-family: 'Franklin Gothic';
+    src: url('./fonts/FranklinGothic-Med-webfont.woff');
+    font-style: normal;
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Franklin Gothic Condensed', Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+    font-weight: 400;
+    letter-spacing: -.0125em;
+    color: #343f47;
+}
+
+h4 {
+    font-size: 1.56em;
+}
+
+b {
+    font-weight: 600 !important;
+}
+
+a {
+    color: #004990;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #343f47;
+}
+
+p,
+input,
+h6,
+h5 {
+    font-family: 'Franklin Gothic', Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+    font-weight: 400;
+}
+
+.text-muted {
+    color: #94a3b0 !important;
+}
+
+.text-hero {
+    color: #fff;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-shadow: 0 2px 5px rgba(34, 34, 34, .5);
+}
