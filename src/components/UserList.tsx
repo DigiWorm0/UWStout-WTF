@@ -4,10 +4,10 @@ import AccountType from '../types/AccountType';
 import User from "../types/User";
 import UserBanner from './UserBanner';
 
-export default function UserList(props: { users: User[], hiddenAccountTypes: AccountType[] }) {
+export default function UserList(props: { users: User[] | undefined, hiddenAccountTypes: AccountType[] }) {
     return (
         <>
-            {props.users.length <= 0 && (
+            {props.users === undefined && (
                 <div style={{
                     display: "flex",
                     justifyContent: "center",
@@ -21,7 +21,17 @@ export default function UserList(props: { users: User[], hiddenAccountTypes: Acc
                     />
                 </div>
             )}
-            {props.users.map((user) => {
+            {props.users?.length === 0 && (
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
+                }}>
+                    <h2>No users found.</h2>
+                </div>
+            )}
+            {props.users?.map((user) => {
                 if (props.hiddenAccountTypes.includes(getAccountType(user)))
                     return null;
                 return (

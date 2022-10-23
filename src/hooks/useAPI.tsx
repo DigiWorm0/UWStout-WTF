@@ -6,7 +6,7 @@ const LEADERBOARD_API_URL = "https://api.uwstout.wtf/";
 const PAGE_LENGTH = 100;
 
 export default function useTop(page: number = 0) {
-    const [users, setUsers] = React.useState<User[]>([]);
+    const [users, setUsers] = React.useState<User[] | undefined>(undefined);
     const [userPages, setUserPages] = React.useState<User[][]>([]);
 
     React.useEffect(() => {
@@ -28,7 +28,8 @@ export default function useTop(page: number = 0) {
     }, [page]);
 
     React.useEffect(() => {
-        setUsers(userPages.flat());
+        if (userPages.length > 0)
+            setUsers(userPages.flat());
     }, [userPages]);
 
     return users;
@@ -37,9 +38,13 @@ export default function useTop(page: number = 0) {
 let currentSearchQuery = "";
 
 export function useSearch(search: string) {
-    const [users, setUsers] = React.useState<User[]>([]);
+    const [users, setUsers] = React.useState<User[] | undefined>(undefined);
 
     React.useEffect(() => {
+        if (search.length === 0) {
+            setUsers(undefined);
+            return;
+        }
         currentSearchQuery = search;
         axios.get(LEADERBOARD_API_URL + "users/search", {
             params: {

@@ -29,8 +29,8 @@ export default function Header(props: { setSearchQuery: (query: string) => void,
                                 Unofficial UW-Stout CONNECT<br />Points Leaderboard
                             </h2>
                             <p className="text-muted">
-                                Tracks and sorts students by points gathered from the UW-Stout Connect.
-                                Check in to events using the UW-Stout Connect App to earn points and climb the leaderboard!
+                                Tracks and sorts students by points gathered from the UW-Stout CONNECT.
+                                Check in to events using the UW-Stout CONNECT App to earn points and climb the leaderboard!
                             </p>
                         </Col>
                         <Col lg={6} style={{
@@ -43,7 +43,6 @@ export default function Header(props: { setSearchQuery: (query: string) => void,
                                 as="input"
                                 size="lg"
                                 placeholder="Search students..."
-                                className=""
                                 onInput={(e) => setSearchQuery(e.currentTarget.value)}
                             />
 
