@@ -1,4 +1,3 @@
-import { Card } from 'react-bootstrap';
 import ChannelDB from '../types/ChannelDB';
 import ChannelBanner from './ChannelBanner';
 

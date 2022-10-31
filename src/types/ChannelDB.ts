@@ -27,7 +27,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "23-5",
-        name: "Fox 9",
+        name: "Fox 9+",
         category: "Local",
         url: "https://www.fox9.com/",
     },
@@ -45,8 +45,9 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "25-1",
-        name: "???",
+        name: "KARE 11",
         category: "Local",
+        url: "https://www.kare11.com/",
     },
     {
         number: "25-2",
@@ -295,9 +296,9 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "41-1",
-        name: "HGTV",
-        category: "Home & Garden",
-        url: "https://www.hgtv.com/",
+        name: "TLC",
+        category: "Entertainment",
+        url: "https://www.tlc.com/",
     },
     {
         number: "41-2",
@@ -331,7 +332,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "43-1",
-        name: "B1G Ten Network",
+        name: "Big Ten Network",
         category: "Sports",
         url: "https://www.btn.com/",
     },
@@ -409,13 +410,13 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "47-2",
-        name: "Big Ten Network",
+        name: "Big Ten Network (SD)",
         category: "Sports",
         url: "https://www.btn.com/",
     },
     {
         number: "47-3",
-        name: "Big Ten Network",
+        name: "Big Ten Network (SD)",
         category: "Sports",
         url: "https://www.btn.com/",
     },
@@ -427,7 +428,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "47-5",
-        name: "Bally Sports",
+        name: "Bally Sports (SD)",
         category: "Sports",
         url: "https://www.ballysports.com/",
     },
@@ -767,7 +768,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "52-3",
-        name: "PBS Wisconsin",
+        name: "PBS WIS",
         category: "Entertainment",
         url: "https://www.pbswisconsin.org/",
     },
@@ -879,7 +880,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "58-1",
-        name: "Bally Sports",
+        name: "Bally Sports Wisconsin",
         category: "Sports",
         url: "https://www.ballysports.com/",
     },

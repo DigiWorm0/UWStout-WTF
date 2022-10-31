@@ -24,7 +24,7 @@ function Channels() {
         <>
             <Header
                 title={"Unofficial UW-Stout\nTV Channel Listings"}
-                subtitle={"Sorts and displays the current TV channel for UW-Stout dorm buildings.\nChannels were last tested in CKTO at 11/1/2022."}
+                subtitle={"Sorts and displays the current TV channel for UW-Stout dorm buildings.\nChannel listings are subject to change."}
                 searchPlaceholder={"Search for channels..."}
                 timeout={0}
                 setSearchQuery={setSearchQuery} />
