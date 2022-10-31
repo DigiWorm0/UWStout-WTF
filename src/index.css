@@ -20,6 +20,13 @@
     font-weight: 600;
 }
 
+
+@media print {
+    .noprint {
+        display: none;
+    }
+}
+
 h1,
 h2,
 h3,

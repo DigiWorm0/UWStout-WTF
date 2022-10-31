@@ -1,14 +1,14 @@
 import React from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
-import Header from './components/Header';
-import SideButton from './components/SideButton';
-import UserList from './components/UserList';
-import useTop, { useSearch } from './hooks/useAPI';
-import AccountType from './types/AccountType';
-import { ROLE_COLORS, ROLE_NAMES } from './types/Constants';
+import Header from '../Header';
+import SideButton from '../SideButton';
+import UserList from '../UserList';
+import useTop, { useSearch } from '../../hooks/useAPI';
+import AccountType from '../../types/AccountType';
+import { ROLE_COLORS, ROLE_NAMES } from '../../types/Constants';
 
 
-function App() {
+function Home() {
     const [hiddenAccountTypes, setHiddenAccountTypes] = React.useState<AccountType[]>([]);
     const [searchQuery, setSearchQuery] = React.useState("");
     const [page, setPage] = React.useState(0);
@@ -32,8 +32,10 @@ function App() {
     return (
         <>
             <Header
-                setSearchQuery={setSearchQuery}
-                setHiddenAccountTypes={setHiddenAccountTypes} />
+                title={"Unofficial UW-Stout\nCONNECT Points Leaderboard"}
+                subtitle={"Tracks and sorts students by points gathered from the UW-Stout CONNECT. Check in to events using the UW-Stout CONNECT App to earn points and climb the leaderboard!"}
+                searchPlaceholder={"Search for students..."}
+                setSearchQuery={setSearchQuery} />
 
             <Container>
                 <Row style={{
@@ -72,7 +74,7 @@ function App() {
                             users={users}
                             hiddenAccountTypes={hiddenAccountTypes} />
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} className="noprint">
                         <div style={{
                             backgroundColor: "#f0f3f5",
                             borderRadius: 5,
@@ -82,10 +84,15 @@ function App() {
                             padding: 30,
                         }}>
                             <SideButton
+                                text="TV Channel Listings"
+                                href={"/#/tv"} />
+                            <SideButton
                                 text="UW-Stout Connect"
+                                newTab
                                 href="https://connect.uwstout.edu" />
                             <SideButton
                                 text="UWStout.edu"
+                                newTab
                                 href="https://www.uwstout.edu/" />
                             <hr />
                             <p>
@@ -99,4 +106,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;

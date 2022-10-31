@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function SideButton(props: { text: string, href: string }) {
+export default function SideButton(props: { text: string, href: string, newTab?: boolean }) {
     const [isHovering, setIsHovering] = React.useState(false);
 
     return (
         <a
             href={props.href}
-            target="_blank"
+            target={props.newTab ? "_blank" : "_self"}
             rel="noreferrer"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
