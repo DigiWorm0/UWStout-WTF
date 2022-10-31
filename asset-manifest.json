@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.d754daa4.css",
-    "main.js": "/static/js/main.78d345f3.js",
+    "main.css": "/static/css/main.3011e62b.css",
+    "main.js": "/static/js/main.0d8fe80e.js",
     "static/media/FranklinGothic-Cd-webfont.woff": "/static/media/FranklinGothic-Cd-webfont.83cc00daca84f1e0cb02.woff",
     "static/media/FranklinGothic-Book-webfont.woff": "/static/media/FranklinGothic-Book-webfont.3f73bc4f4ae9652f9a96.woff",
     "static/media/FranklinGothic-Med-webfont.woff": "/static/media/FranklinGothic-Med-webfont.46cced4026db1c8c4e9b.woff",
     "index.html": "/index.html",
-    "main.d754daa4.css.map": "/static/css/main.d754daa4.css.map",
-    "main.78d345f3.js.map": "/static/js/main.78d345f3.js.map"
+    "main.3011e62b.css.map": "/static/css/main.3011e62b.css.map",
+    "main.0d8fe80e.js.map": "/static/js/main.0d8fe80e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d754daa4.css",
-    "static/js/main.78d345f3.js"
+    "static/css/main.3011e62b.css",
+    "static/js/main.0d8fe80e.js"
   ]
 }
