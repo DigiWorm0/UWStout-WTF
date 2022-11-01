@@ -40,7 +40,7 @@ export default function Header(props: HeaderProps) {
                                     </span>
                                 ))}
                             </h2>
-                            <p className="text-muted">
+                            <p className="text-muted noprint">
                                 {props.subtitle.split("\n").map((line, index) => (
                                     <span key={index}>
                                         {line}
@@ -49,13 +49,16 @@ export default function Header(props: HeaderProps) {
                                 ))}
                             </p>
                         </Col>
-                        <Col lg={6} style={{
-                            justifyContent: "center",
-                            alignItems: "center",
-                            display: "flex",
-                        }}>
+                        <Col
+                            lg={6}
+                            style={{
+                                justifyContent: "center",
+                                alignItems: "center",
+                                display: "flex",
+                            }}>
 
                             <Form.Control
+                                className={"noprint"}
                                 as="input"
                                 size="lg"
                                 placeholder={props.searchPlaceholder ?? "Search"}

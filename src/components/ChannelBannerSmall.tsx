@@ -2,12 +2,15 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import Channel from '../types/Channel';
 
-export default function ChannelBanner(props: { channel: Channel }) {
+export default function ChannelBannerSmall(props: { channel: Channel }) {
     const channel = props.channel;
 
     return (
         <>
             <Card
+                style={{
+                    backgroundColor: "transparent",
+                }}
                 className="mt-0 border-0">
 
                 <Card.Body style={{
@@ -24,28 +27,12 @@ export default function ChannelBanner(props: { channel: Channel }) {
                         {channel.number}
                     </h3>
                     <div>
-                        <h4 style={{
-                            overflowWrap: "anywhere",
-                            marginBottom: 5
-                        }}>
-                            {channel.url ? (
-                                <a
-                                    href={channel.url}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    style={{
-                                        textDecoration: "none",
-                                        paddingRight: 10,
-                                    }}>
-                                    {channel.name}
-                                </a>
-                            ) : (
-                                channel.name
-                            )}
-                        </h4>
-
-                        <h6 className="text-muted">
-                            {channel.category}
+                        <h6
+                            style={{
+                                overflowWrap: "anywhere",
+                                marginBottom: 5
+                            }}>
+                            {channel.name}
                         </h6>
                     </div>
                     <img
@@ -54,17 +41,14 @@ export default function ChannelBanner(props: { channel: Channel }) {
                         height={40}
                         style={{
                             height: 40,
-                            maxWidth: 100,
+                            maxWidth: 50,
                             objectFit: "contain",
                             marginLeft: "auto",
                             marginRight: 20,
+                            marginTop: 2
                         }} />
                 </Card.Body>
             </Card>
-            <hr style={{
-                marginTop: 7,
-                marginBottom: 13,
-            }} />
         </>
     )
 }

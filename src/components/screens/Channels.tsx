@@ -6,19 +6,6 @@ import SideButton from '../SideButton';
 
 function Channels() {
     const [searchQuery, setSearchQuery] = React.useState("");
-    const [page, setPage] = React.useState(0);
-
-    React.useEffect(() => {
-        const onScroll = () => {
-            if (window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight)
-                setPage(p => p + 1);
-        }
-
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
-
-    console.log(page);
 
     return (
         <>
@@ -34,7 +21,9 @@ function Channels() {
                 <Row style={{
                     minHeight: "100%",
                 }}>
-                    <Col lg={8}>
+                    <Col lg={8} style={{
+                        paddingTop: 30
+                    }}>
 
                         <ChannelList
                             searchQuery={searchQuery}
@@ -50,6 +39,9 @@ function Channels() {
                             textAlign: "center",
                             padding: 30,
                         }}>
+                            <SideButton
+                                text="Printable Version"
+                                href={"/#/tvprint"} />
                             <SideButton
                                 text="CONNECT Leaderboard"
                                 href={"/"} />

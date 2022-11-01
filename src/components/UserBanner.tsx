@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import getAccountType from '../hooks/getAccountType';
-import AccountType from '../types/AccountType';
 import { ROLE_COLORS, ROLE_NAMES } from '../types/Constants';
 import User from "../types/User";
 
