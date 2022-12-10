@@ -27,13 +27,11 @@ function Home() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    console.log(page);
-
     return (
         <>
             <Header
                 title={"Unofficial UW-Stout\nCONNECT Points Leaderboard"}
-                subtitle={"Tracks and sorts students by points gathered from the UW-Stout CONNECT. Check in to events using the UW-Stout CONNECT App to earn points and climb the leaderboard!"}
+                subtitle={"Tracks and sorts students by points gathered from UW-Stout CONNECT. Check in to events using the UW-Stout CONNECT App to earn points and climb the leaderboard!"}
                 searchPlaceholder={"Search for students..."}
                 setSearchQuery={setSearchQuery} />
 

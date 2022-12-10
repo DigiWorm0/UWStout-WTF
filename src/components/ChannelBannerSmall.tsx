@@ -10,6 +10,8 @@ export default function ChannelBannerSmall(props: { channel: Channel }) {
             <Card
                 style={{
                     backgroundColor: "transparent",
+                    breakInside: "avoid",
+                    boxDecorationBreak: "clone",
                 }}
                 className="mt-0 border-0">
 

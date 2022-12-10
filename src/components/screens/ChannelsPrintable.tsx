@@ -1,7 +1,12 @@
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import ChannelGroup from '../ChannelGroup';
 
 function ChannelsPrintable() {
+    React.useEffect(() => {
+        window.print();
+    }, []);
+
     return (
         <>
 
@@ -43,15 +48,6 @@ function ChannelsPrintable() {
                         />
 
                         <ChannelGroup
-                            headerColor="rgb(205, 112, 29)"
-                            bgColor="rgb(255, 231, 181)"
-                            title="Kids"
-                            channelQueries={[
-                                "Kids",
-                            ]}
-                        />
-
-                        <ChannelGroup
                             headerColor="rgb(173, 38, 38)"
                             bgColor="rgb(255, 181, 181)"
                             title="Home & Garden"
@@ -69,6 +65,16 @@ function ChannelsPrintable() {
                                 "Local",
                             ]}
                         />
+
+                        <ChannelGroup
+                            headerColor="rgb(205, 112, 29)"
+                            bgColor="rgb(255, 231, 181)"
+                            title="Kids"
+                            channelQueries={[
+                                "Kids",
+                            ]}
+                        />
+
                     </Col>
                 </Row>
             </Container>

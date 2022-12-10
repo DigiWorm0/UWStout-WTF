@@ -11,7 +11,9 @@ interface ChannelGroupProps {
 export default function ChannelGroup(props: ChannelGroupProps) {
     return (
         <Card style={{
-            margin: 5
+            margin: 5,
+
+            breakInside: "avoid",
         }}>
             <Card.Header style={{
                 backgroundColor: props.headerColor,
@@ -24,6 +26,7 @@ export default function ChannelGroup(props: ChannelGroupProps) {
             }}>
                 {props.channelQueries.map((query, index) => (
                     <ChannelList
+                        key={index}
                         searchQuery={query}
                         small
                     />
