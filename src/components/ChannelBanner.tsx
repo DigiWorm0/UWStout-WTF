@@ -42,6 +42,11 @@ export default function ChannelBanner(props: { channel: Channel }) {
                             ) : (
                                 channel.name
                             )}
+                            {channel.name.includes("*") && (
+                                <span className={'text-muted fs-5'}>
+                                    (May be unavailable)
+                                </span>
+                            )}
                         </h4>
 
                         <h6 className="text-muted">

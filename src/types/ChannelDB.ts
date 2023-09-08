@@ -105,13 +105,13 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "29-1",
-        name: "ESPN",
+        name: "ESPN*",
         category: "Sports",
         url: "https://www.espn.com/",
     },
     {
         number: "29-2",
-        name: "ESPN2",
+        name: "ESPN2*",
         category: "Sports",
         url: "https://www.espn.com/",
     },
@@ -153,7 +153,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "32-3",
-        name: "FX",
+        name: "FX*",
         category: "Entertainment",
         url: "https://www.fxnetworks.com/",
     },
@@ -188,11 +188,6 @@ const ChannelDB: Channel[] = [
         url: "https://www.amc.com/",
     },
     {
-        number: "35-1",
-        name: "???",
-        category: "Local",
-    },
-    {
         number: "35-2",
         name: "A&E",
         category: "Entertainment",
@@ -206,7 +201,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "36-1",
-        name: "Freeform",
+        name: "Freeform*",
         category: "Entertainment",
         url: "https://www.freeform.com/",
     },
@@ -284,7 +279,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "40-2",
-        name: "National Geographic",
+        name: "National Geographic*",
         category: "Entertainment",
         url: "https://www.nationalgeographic.com/",
     },
@@ -314,7 +309,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "42-1",
-        name: "Disney Channel",
+        name: "Disney Channel*",
         category: "Kids",
         url: "https://www.disneychannel.com/",
     },
@@ -362,7 +357,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "45-1",
-        name: "Disney XD",
+        name: "Disney XD*",
         category: "Kids",
         url: "https://www.disneyxd.com/",
     },
@@ -779,11 +774,6 @@ const ChannelDB: Channel[] = [
         url: "https://www.createtv.com/",
     },
     {
-        number: "53-3",
-        name: "Windows Login Screen",
-        category: "Local",
-    },
-    {
         number: "53-4",
         name: "Stockton Birthdays & News",
         category: "Local",
@@ -868,7 +858,7 @@ const ChannelDB: Channel[] = [
     },
     {
         number: "57-1",
-        name: "ESPN U",
+        name: "ESPN U*",
         category: "Sports",
         url: "https://www.espn.com/",
     },
