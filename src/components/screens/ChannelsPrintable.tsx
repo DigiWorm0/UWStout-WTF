@@ -1,14 +1,18 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import ChannelGroup from '../ChannelGroup';
+import { Helmet } from 'react-helmet';
 
 function ChannelsPrintable() {
     React.useEffect(() => {
-        //window.print();
+        window.print();
     }, []);
 
     return (
         <>
+            <Helmet>
+                <title>TV Channel Listings</title>
+            </Helmet>
             <Container fluid>
                 <Row
                     style={{
@@ -28,7 +32,7 @@ function ChannelsPrintable() {
                             UW-Stout TV Channel Listings
                         </h3>
                         <p className={"text-center mb-1"}>
-                            * Some channels may be unavailable
+                            https://tv.uwstout.wtf/
                         </p>
                         <ChannelGroup
                             borderColor="rgb(11, 128, 7)"

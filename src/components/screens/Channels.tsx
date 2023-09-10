@@ -3,12 +3,16 @@ import { Col, Container, Row } from 'react-bootstrap';
 import ChannelList from '../ChannelList';
 import Header from '../Header';
 import SideButton from '../SideButton';
+import { Helmet } from "react-helmet";
 
 function Channels() {
     const [searchQuery, setSearchQuery] = React.useState("");
 
     return (
         <>
+            <Helmet>
+                <title>TV Channel Listings</title>
+            </Helmet>
             <Header
                 title={"Unofficial UW-Stout\nTV Channel Listings"}
                 subtitle={"Sorts and displays the current TV channel for UW-Stout dorm buildings.\nChannel listings are subject to change."}

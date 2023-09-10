@@ -4,4 +4,5 @@ export default interface Channel {
     category: string;
     url?: string;
     logo?: string;
+    isSD?: boolean;
 }

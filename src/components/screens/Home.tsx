@@ -6,6 +6,7 @@ import UserList from '../UserList';
 import useTop, { useSearch } from '../../hooks/useAPI';
 import AccountType from '../../types/AccountType';
 import { ROLE_COLORS, ROLE_NAMES } from '../../types/Constants';
+import { Helmet } from "react-helmet";
 
 
 function Home() {
@@ -29,6 +30,9 @@ function Home() {
 
     return (
         <>
+            <Helmet>
+                <title>CONNECT Points Leaderboard</title>
+            </Helmet>
             <Header
                 title={"Unofficial UW-Stout\nCONNECT Points Leaderboard"}
                 subtitle={"Tracks and sorts students by points gathered from UW-Stout CONNECT. Check in to events using the UW-Stout CONNECT App to earn points and climb the leaderboard!"}
