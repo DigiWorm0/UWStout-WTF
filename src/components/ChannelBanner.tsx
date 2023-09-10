@@ -8,26 +8,31 @@ export default function ChannelBanner(props: { channel: Channel }) {
     return (
         <>
             <Card
-                className="mt-0 border-0">
-
-                <Card.Body style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    padding: 0,
-                }}>
-
-                    <h3 style={{
-                        marginRight: 20,
-                        textAlign: "center",
-                    }}>
+                className="mt-0 border-0"
+            >
+                <Card.Body
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        padding: 0,
+                    }}
+                >
+                    <h3
+                        style={{
+                            marginRight: 20,
+                            minWidth: 65,
+                        }}
+                    >
                         {channel.number}
                     </h3>
                     <div>
-                        <h4 style={{
-                            overflowWrap: "anywhere",
-                            marginBottom: 5
-                        }}>
+                        <h4
+                            style={{
+                                overflowWrap: "anywhere",
+                                marginBottom: 5
+                            }}
+                        >
                             {channel.url ? (
                                 <a
                                     href={channel.url}
@@ -36,7 +41,8 @@ export default function ChannelBanner(props: { channel: Channel }) {
                                     style={{
                                         textDecoration: "none",
                                         paddingRight: 10,
-                                    }}>
+                                    }}
+                                >
                                     {channel.name}
                                 </a>
                             ) : (
@@ -63,7 +69,8 @@ export default function ChannelBanner(props: { channel: Channel }) {
                             objectFit: "contain",
                             marginLeft: "auto",
                             marginRight: 20,
-                        }} />
+                        }}
+                    />
                 </Card.Body>
             </Card>
             <hr style={{

@@ -4,77 +4,77 @@ import ChannelGroup from '../ChannelGroup';
 
 function ChannelsPrintable() {
     React.useEffect(() => {
-        window.print();
+        //window.print();
     }, []);
 
     return (
         <>
-
             <Container fluid>
-                <Row style={{
-                    minHeight: "100%"
-                }}>
-                    <Col xs={6} style={{
-                        padding: 0
-                    }}>
+                <Row
+                    style={{
+                        minHeight: "100%"
+                    }}
+                >
+                    <Col
+                        xs={6}
+                        style={{
+                            padding: 0
+                        }}
+                    >
+                        <p className={"text-center text-muted fst-italic mb-0"}>
+                            (Unofficial)
+                        </p>
+                        <h3 className={"text-center text-primary mb-0"}>
+                            UW-Stout TV Channel Listings
+                        </h3>
+                        <p className={"text-center mb-1"}>
+                            * Some channels may be unavailable
+                        </p>
                         <ChannelGroup
-                            headerColor="rgb(0, 60, 119)"
-                            bgColor="rgb(181, 231, 255)"
-                            title="Sports"
+                            borderColor="rgb(11, 128, 7)"
+                            bgColor="rgb(181, 255, 181)"
+                            title="Entertainment 🎥"
                             channelQueries={[
-                                "Sports",
+                                "Entertainment",
                             ]}
                         />
                         <ChannelGroup
-                            headerColor="rgb(145, 13, 125)"
-                            bgColor="rgb(255, 181, 255)"
-                            title="Music"
+                            borderColor="rgb(205, 112, 29)"
+                            bgColor="rgb(255, 231, 181)"
+                            title="Kids 👩‍👶‍👦"
                             channelQueries={[
-                                "Music",
+                                "Kids",
+                            ]}
+                        />
+                        <ChannelGroup
+                            borderColor="rgb(190, 196, 5)"
+                            bgColor="rgb(255, 255, 181)"
+                            title="Public 📢"
+                            channelQueries={[
+                                "Public",
+                                "Local",
                             ]}
                         />
                     </Col>
                     <Col xs={6} style={{
                         padding: 0
                     }}>
-
                         <ChannelGroup
-                            headerColor="rgb(11, 128, 7)"
-                            bgColor="rgb(181, 255, 181)"
-                            title="Entertainment"
+                            borderColor="rgb(0, 60, 119)"
+                            bgColor="rgb(181, 231, 255)"
+                            title="Sports 🏈"
                             channelQueries={[
-                                "Entertainment",
+                                "Sports",
                             ]}
                         />
-
                         <ChannelGroup
-                            headerColor="rgb(173, 38, 38)"
-                            bgColor="rgb(255, 181, 181)"
-                            title="Home & Garden"
+                            borderColor="rgb(145, 13, 125)"
+                            bgColor="rgb(255, 181, 255)"
+                            title="Music 🎶"
                             channelQueries={[
-                                "Home & Garden",
+                                "Music",
                             ]}
                         />
-
-                        <ChannelGroup
-                            headerColor="rgb(190, 196, 5)"
-                            bgColor="rgb(255, 255, 181)"
-                            title="Public"
-                            channelQueries={[
-                                "Public",
-                                "Local",
-                            ]}
-                        />
-
-                        <ChannelGroup
-                            headerColor="rgb(205, 112, 29)"
-                            bgColor="rgb(255, 231, 181)"
-                            title="Kids"
-                            channelQueries={[
-                                "Kids",
-                            ]}
-                        />
-
                     </Col>
                 </Row>
             </Container>

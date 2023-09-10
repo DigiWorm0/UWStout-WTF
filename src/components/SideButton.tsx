@@ -30,10 +30,9 @@ export default function SideButton(props: { text: string, href: string, newTab?:
                 textAlign: "center",
                 verticalAlign: "middle",
                 letterSpacing: ".1em"
-            }}>
-
+            }}
+        >
             {props.text}
-
         </a>
     );
 }

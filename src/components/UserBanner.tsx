@@ -21,18 +21,23 @@ export default function UserBanner(props: { user: User }) {
     return (
         <>
             <Card
-                className="mt-0 border-0">
-                <Card.Body style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    padding: 0,
-                }}>
+                className="mt-0 border-0"
+            >
+                <Card.Body
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        padding: 0,
+                    }}
+                >
 
-                    <h3 style={{
-                        marginRight: 20,
-                        textAlign: "center",
-                    }}>
+                    <h3
+                        style={{
+                            marginRight: 20,
+                            textAlign: "center",
+                        }}
+                    >
                         #{rank}
                     </h3>
                     <img
@@ -51,10 +56,12 @@ export default function UserBanner(props: { user: User }) {
                         }}
                     />
                     <div>
-                        <h4 style={{
-                            overflowWrap: "anywhere",
-                            marginBottom: 5
-                        }}>
+                        <h4
+                            style={{
+                                overflowWrap: "anywhere",
+                                marginBottom: 5
+                            }}
+                        >
                             <a
                                 href={URL_PREFIX + user.uid}
                                 target="_blank"
@@ -62,7 +69,8 @@ export default function UserBanner(props: { user: User }) {
                                 style={{
                                     textDecoration: "none",
                                     paddingRight: 10,
-                                }}>
+                                }}
+                            >
                                 {user.firstName} {user.lastName}
                             </a>
                         </h4>
@@ -72,19 +80,23 @@ export default function UserBanner(props: { user: User }) {
                             {isDev && `#${user.id}`}
                         </h6>
                     </div>
-                    <h4 style={{
-                        marginLeft: "auto",
-                        marginRight: 20,
-                        textAlign: "right"
-                    }}>
+                    <h4
+                        style={{
+                            marginLeft: "auto",
+                            marginRight: 20,
+                            textAlign: "right"
+                        }}
+                    >
                         {user.pointCount.toLocaleString()} <br /><span className="fs-6">points</span>
                     </h4>
                 </Card.Body>
             </Card>
-            <hr style={{
-                marginTop: 7,
-                marginBottom: 13,
-            }} />
+            <hr
+                style={{
+                    marginTop: 7,
+                    marginBottom: 13,
+                }}
+            />
         </>
     )
 }

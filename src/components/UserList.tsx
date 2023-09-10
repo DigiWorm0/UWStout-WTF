@@ -8,12 +8,14 @@ export default function UserList(props: { users: User[] | undefined, hiddenAccou
     return (
         <>
             {props.users === undefined && (
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                }}>
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                    }}
+                >
                     <Spinner
                         animation="border"
                         role="status"
@@ -22,12 +24,14 @@ export default function UserList(props: { users: User[] | undefined, hiddenAccou
                 </div>
             )}
             {props.users?.length === 0 && (
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                }}>
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                    }}
+                >
                     <h2>No users found.</h2>
                 </div>
             )}

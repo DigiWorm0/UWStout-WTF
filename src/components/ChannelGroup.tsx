@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap";
 import ChannelList from "./ChannelList";
 
 interface ChannelGroupProps {
-    headerColor: string;
+    borderColor: string;
     bgColor: string;
     title: string;
     channelQueries: string[];
@@ -10,28 +10,32 @@ interface ChannelGroupProps {
 
 export default function ChannelGroup(props: ChannelGroupProps) {
     return (
-        <Card style={{
-            margin: 5,
-
-            breakInside: "avoid",
-        }}>
-            <Card.Header style={{
-                backgroundColor: props.headerColor,
-                color: "white",
-            }}>
-                {props.title}
-            </Card.Header>
-            <Card.Body style={{
+        <div
+            style={{
+                borderRadius: 10,
+                borderStyle: "solid",
+                borderWidth: 1,
+                borderColor: props.borderColor,
+                paddingLeft: 12,
+                paddingRight: 12,
+                paddingTop: 8,
+                paddingBottom: 8,
+                marginTop: 8,
+                marginLeft: 8,
                 backgroundColor: props.bgColor,
-            }}>
-                {props.channelQueries.map((query, index) => (
-                    <ChannelList
-                        key={index}
-                        searchQuery={query}
-                        small
-                    />
-                ))}
-            </Card.Body>
-        </Card>
+                //breakInside: "avoid",
+            }}
+        >
+            <h5 className={"fw-bold text-center"}>
+                {props.title}
+            </h5>
+            {props.channelQueries.map((query, index) => (
+                <ChannelList
+                    key={index}
+                    searchQuery={query}
+                    small
+                />
+            ))}
+        </div>
     );
 }

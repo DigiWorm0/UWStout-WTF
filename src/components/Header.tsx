@@ -24,11 +24,14 @@ export default function Header(props: HeaderProps) {
 
     return (
         <>
-            <Container fluid style={{
-                boxShadow: "0 0 10px rgba(0,0,0,.8)",
-                background: "linear-gradient(135deg, #003c77, #004990)",
-                color: "white",
-            }}>
+            <Container
+                fluid
+                style={{
+                    boxShadow: "0 0 10px rgba(0,0,0,.8)",
+                    background: "linear-gradient(135deg, #003c77, #004990)",
+                    color: "white",
+                }}
+            >
                 <Container>
                     <Row style={{ padding: 50 }}>
                         <Col lg={6}>
@@ -55,8 +58,8 @@ export default function Header(props: HeaderProps) {
                                 justifyContent: "center",
                                 alignItems: "center",
                                 display: "flex",
-                            }}>
-
+                            }}
+                        >
                             <Form.Control
                                 className={"noprint"}
                                 as="input"
@@ -64,7 +67,6 @@ export default function Header(props: HeaderProps) {
                                 placeholder={props.searchPlaceholder ?? "Search"}
                                 onInput={(e) => setSearchQuery(e.currentTarget.value)}
                             />
-
                         </Col>
                     </Row>
                 </Container>

@@ -11,44 +11,55 @@ export default function ChannelBannerSmall(props: { channel: Channel }) {
                 style={{
                     backgroundColor: "transparent",
                     breakInside: "avoid",
-                    boxDecorationBreak: "clone",
                 }}
-                className="mt-0 border-0">
-
-                <Card.Body style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    padding: 0,
-                }}>
-
-                    <h3 style={{
-                        marginRight: 20,
-                        textAlign: "center",
-                    }}>
+                className="mt-0 border-0"
+            >
+                <Card.Body
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        padding: 0,
+                    }}
+                >
+                    <h6
+                        style={{
+                            marginRight: 20,
+                            minWidth: 40,
+                            marginBottom: 0,
+                        }}
+                    >
                         {channel.number}
-                    </h3>
+                    </h6>
                     <div>
-                        <h6
+                        <p
                             style={{
                                 overflowWrap: "anywhere",
-                                marginBottom: 5
-                            }}>
-                            {channel.name}
-                        </h6>
+                                margin: 1
+                            }}
+                        >
+                            {channel.name.includes("*") ? (
+                                <i>
+                                    {channel.name}
+                                </i>
+                            ) : (
+                                channel.name
+                            )}
+                        </p>
                     </div>
                     <img
                         src={`/channels/${channel.logo || channel.number}.png`}
                         alt=''
                         height={40}
                         style={{
-                            height: 40,
-                            maxWidth: 50,
+                            height: 20,
+                            maxWidth: 40,
                             objectFit: "contain",
                             marginLeft: "auto",
-                            marginRight: 20,
-                            marginTop: 2
-                        }} />
+                            marginRight: 10,
+                            marginBottom: 1
+                        }}
+                    />
                 </Card.Body>
             </Card>
         </>
